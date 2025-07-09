@@ -11,15 +11,15 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#2563eb',
-                        'primary-light': '#60a5fa',
-                        'accent': '#f1f5f9',
-                        'text-primary': '#1e293b',
-                        'text-secondary': '#64748b',
-                        'soft-blue': '#eff6ff',
+                        'gradescope-blue': '#4A90E2',
+                        'gradescope-dark': '#2C3E50',
+                        'gradescope-gray': '#5A6C7D',
+                        'gradescope-light': '#F8F9FA',
+                        'gradescope-accent': '#E8F4FD',
+                        'gradescope-green': '#27AE60',
                     },
                     fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'sans': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
                     },
                     spacing: {
                         '18': '4.5rem',
@@ -29,23 +29,20 @@
             }
         }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="font-sans text-text-primary leading-relaxed bg-white">
+<body class="font-sans text-gradescope-dark leading-relaxed bg-white antialiased">
     <!-- Navigation -->
-    <nav class="bg-white/95 backdrop-blur-sm fixed w-full z-50 border-b border-gray-100/50">
-        <div class="max-w-6xl mx-auto px-6 sm:px-8">
-            <div class="flex justify-between items-center h-18">
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
-                    <h1 class="text-2xl font-bold text-primary tracking-tight">EduPrep AI</h1>
+                    <h1 class="text-2xl font-semibold text-gradescope-dark">EduPrep AI</h1>
                 </div>
                 <div class="hidden md:block">
                     <div class="flex items-center space-x-8">
-                        <a href="#mission" class="text-text-secondary hover:text-primary transition-colors duration-300 font-medium">Mission</a>
-                        <a href="#contact" class="text-text-secondary hover:text-primary transition-colors duration-300 font-medium">Contact</a>
-                        <a href="#cta" class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium shadow-sm hover:shadow-md">Get Started</a>
+                        <a href="#mission" class="text-gradescope-gray hover:text-gradescope-dark transition-colors duration-200 font-medium text-sm">Mission</a>
+                        <a href="#contact" class="text-gradescope-gray hover:text-gradescope-dark transition-colors duration-200 font-medium text-sm">Contact</a>
+                        <a href="#cta" class="bg-gradescope-blue text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors duration-200 font-medium text-sm">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -53,32 +50,38 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-b from-soft-blue/30 to-white">
-        <div class="max-w-5xl mx-auto px-6 sm:px-8 text-center">
-            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-text-primary leading-[1.1] mb-8 tracking-tight">
-                Redefining<br>
-                <span class="text-primary">Education</span>
+    <section class="bg-white py-20 lg:py-32">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gradescope-dark leading-tight mb-6">
+                Redefining In-School Education
             </h1>
-            <p class="text-xl sm:text-2xl text-text-secondary mb-16 max-w-3xl mx-auto leading-relaxed font-light">
-                AI that digitizes classroom workflows and automates grading, freeing educators to focus on what they love most: <span class="font-medium text-text-primary">teaching</span>.
+            <p class="text-xl sm:text-2xl text-gradescope-gray mb-12 max-w-4xl mx-auto leading-relaxed">
+                EduPrep AI digitizes classroom workflows and automates grading, freeing educators to focus on what they love most: <span class="font-semibold text-gradescope-dark">teaching</span>.
             </p>
-                
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#cta" class="bg-gradescope-blue text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-blue-600 transition-colors duration-200">
+                    Get Started
+                </a>
+                <a href="#mission" class="border border-gradescope-blue text-gradescope-blue px-8 py-3 rounded-md text-lg font-medium hover:bg-gradescope-blue hover:text-white transition-colors duration-200">
+                    Learn More
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Mission Section -->
-    <section id="mission" class="py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-6 sm:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl sm:text-5xl font-bold text-text-primary mb-6 tracking-tight">Our Mission</h2>
-                <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+    <section id="mission" class="py-20 bg-gradescope-light">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gradescope-dark mb-4">Our Mission</h2>
+                <div class="w-16 h-0.5 bg-gradescope-blue mx-auto"></div>
             </div>
             
-            <div class="space-y-12 text-lg leading-relaxed">
-                <p class="text-text-secondary font-light text-center max-w-3xl mx-auto">
+            <div class="max-w-4xl mx-auto space-y-8">
+                <p class="text-lg text-gradescope-gray text-center leading-relaxed">
                     Through mindful AI-driven test prep that never reveals answers directly, EduPrep AI guides every student toward independent thinking and deep mastery, allowing them to learn effectively at their own pace and style.
                 </p>
-                <p class="text-text-secondary font-light text-center max-w-3xl mx-auto">
+                <p class="text-lg text-gradescope-gray text-center leading-relaxed">
                     We're eliminating the need for afterschool private coaching by ensuring schools finally deliver personalized feedback, deep understanding, and the space to learn at every student's own pace.
                 </p>
             </div>
@@ -86,18 +89,18 @@
     </section>
 
     <!-- Vision Section -->
-    <section class="py-24 bg-gradient-to-br from-soft-blue to-white">
-        <div class="max-w-4xl mx-auto px-6 sm:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl sm:text-5xl font-bold text-text-primary mb-6 tracking-tight">Our Vision</h2>
-                <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gradescope-dark mb-4">Our Vision</h2>
+                <div class="w-16 h-0.5 bg-gradescope-blue mx-auto"></div>
             </div>
             
-            <div class="space-y-12 text-lg leading-relaxed">
-                <p class="text-text-secondary font-light text-center max-w-3xl mx-auto">
+            <div class="max-w-4xl mx-auto space-y-8">
+                <p class="text-lg text-gradescope-gray text-center leading-relaxed">
                     We're building a future where AI enhances and never replaces learning. A future where no child feels inadequate because the classroom moved too fast, and after-school coaching becomes obsolete.
                 </p>
-                <p class="text-text-secondary font-light text-center max-w-3xl mx-auto">
+                <p class="text-lg text-gradescope-gray text-center leading-relaxed">
                     Our AI asks better questions instead of giving answers, helping students think critically, while teachers are freed from mechanical grading to focus on inspiring minds.
                 </p>
             </div>
@@ -105,35 +108,37 @@
     </section>
 
     <!-- Problem Statement -->
-    <section class="py-24 bg-white">
-        <div class="max-w-3xl mx-auto px-6 sm:px-8 text-center">
-            <h2 class="text-4xl sm:text-5xl font-bold text-text-primary mb-16 tracking-tight">The Reality We're Changing</h2>
-            <blockquote class="text-2xl sm:text-3xl text-text-primary italic font-light leading-relaxed mb-8">
-                "A young student attends a second school after returning from school."
-            </blockquote>
-            <p class="text-lg text-text-secondary font-light">
-                This shouldn't be the reality for any child. We're changing that.
-            </p>
+    <section class="py-20 bg-gradescope-accent">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gradescope-dark mb-12">The Reality We're Changing</h2>
+            <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-200">
+                <blockquote class="text-xl sm:text-2xl text-gradescope-dark italic leading-relaxed mb-6">
+                    "A young student attends a second school after returning from school."
+                </blockquote>
+                <p class="text-lg text-gradescope-gray">
+                    This shouldn't be the reality for any child. We're changing that.
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- Call to Action Section -->
-    <section id="cta" class="py-32 bg-gradient-to-br from-primary/5 to-primary-light/5">
-        <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center">
-            <h2 class="text-4xl sm:text-5xl font-bold text-text-primary mb-8 tracking-tight">
+    <section id="cta" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gradescope-dark mb-6">
                 Ready to Transform Education?
             </h2>
-            <p class="text-xl text-text-secondary mb-16 max-w-2xl mx-auto font-light leading-relaxed">
+            <p class="text-lg text-gradescope-gray mb-10 max-w-2xl mx-auto leading-relaxed">
                 Join us in creating a future where every student can learn at their own pace and every teacher can focus on what they do best.
             </p>
             
-            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a href="mailto:contact@eduprep-ai.com" 
-                   class="bg-primary text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                   class="bg-gradescope-blue text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-blue-600 transition-colors duration-200">
                     Get in Touch
                 </a>
                 <a href="#contact" 
-                   class="border-2 border-primary/20 text-text-primary px-10 py-4 rounded-full text-lg font-medium hover:border-primary hover:bg-primary hover:text-white transition-all duration-300">
+                   class="border border-gradescope-blue text-gradescope-blue px-8 py-3 rounded-md text-lg font-medium hover:bg-gradescope-blue hover:text-white transition-colors duration-200">
                     Learn More
                 </a>
             </div>
@@ -141,75 +146,75 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-32 bg-white">
-        <div class="max-w-4xl mx-auto px-6 sm:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl sm:text-5xl font-bold text-text-primary mb-6 tracking-tight">Get in Touch</h2>
-                <div class="w-20 h-1 bg-primary mx-auto rounded-full mb-6"></div>
-                <p class="text-xl text-text-secondary font-light">
+    <section id="contact" class="py-20 bg-gradescope-light">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gradescope-dark mb-4">Get in Touch</h2>
+                <div class="w-16 h-0.5 bg-gradescope-blue mx-auto mb-4"></div>
+                <p class="text-lg text-gradescope-gray">
                     Ready to revolutionize education? We'd love to hear from you.
                 </p>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-16 items-start">
+            <div class="grid md:grid-cols-2 gap-12 items-start">
                 <!-- Contact Info -->
-                <div class="space-y-12">
+                <div class="space-y-8">
                     <div>
-                        <h3 class="text-2xl font-semibold text-text-primary mb-6">Contact Information</h3>
-                        <div class="space-y-6">
+                        <h3 class="text-xl font-semibold text-gradescope-dark mb-4">Contact Information</h3>
+                        <div class="space-y-4">
                             <div class="flex items-center">
-                                <div class="w-6 h-6 text-primary mr-4">
+                                <div class="w-5 h-5 text-gradescope-blue mr-3">
                                     <svg fill="currentColor" viewBox="0 0 20 20">
                                         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                                         <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                                     </svg>
                                 </div>
-                                <a href="mailto:contact@eduprep-ai.com" class="text-text-secondary hover:text-primary transition-colors font-medium">
+                                <a href="mailto:contact@eduprep-ai.com" class="text-gradescope-gray hover:text-gradescope-blue transition-colors">
                                     contact@eduprep-ai.com
                                 </a>
                             </div>
                             <div class="flex items-center">
-                                <div class="w-6 h-6 text-primary mr-4">
+                                <div class="w-5 h-5 text-gradescope-blue mr-3">
                                     <svg fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
                                     </svg>
                                 </div>
-                                <span class="text-text-secondary font-medium">San Francisco, CA</span>
+                                <span class="text-gradescope-gray">San Francisco, CA</span>
                             </div>
                         </div>
                     </div>
                     
                     <div>
-                        <h3 class="text-2xl font-semibold text-text-primary mb-6">For Educators</h3>
-                        <p class="text-text-secondary leading-relaxed font-light">
+                        <h3 class="text-xl font-semibold text-gradescope-dark mb-4">For Educators</h3>
+                        <p class="text-gradescope-gray leading-relaxed">
                             Interested in piloting EduPrep AI in your classroom? We're looking for forward-thinking educators to join our early access program.
                         </p>
                     </div>
                 </div>
 
                 <!-- Simple Contact Form -->
-                <div class="bg-gradient-to-br from-soft-blue/20 to-white rounded-3xl border border-gray-100/50 p-10">
-                    <form class="space-y-8">
+                <div class="bg-white rounded-lg border border-gray-300 p-8">
+                    <form class="space-y-6">
                         <div>
-                            <label for="name" class="block text-sm font-medium text-text-primary mb-3">Name</label>
+                            <label for="name" class="block text-sm font-medium text-gradescope-dark mb-2">Name</label>
                             <input type="text" id="name" name="name" 
-                                   class="w-full px-5 py-4 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-white/70"
+                                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gradescope-blue focus:border-gradescope-blue transition-colors duration-200"
                                    placeholder="Your name">
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-medium text-text-primary mb-3">Email</label>
+                            <label for="email" class="block text-sm font-medium text-gradescope-dark mb-2">Email</label>
                             <input type="email" id="email" name="email" 
-                                   class="w-full px-5 py-4 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-white/70"
+                                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gradescope-blue focus:border-gradescope-blue transition-colors duration-200"
                                    placeholder="your.email@example.com">
                         </div>
                         <div>
-                            <label for="message" class="block text-sm font-medium text-text-primary mb-3">Message</label>
-                            <textarea id="message" name="message" rows="5" 
-                                      class="w-full px-5 py-4 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 bg-white/70 resize-none"
+                            <label for="message" class="block text-sm font-medium text-gradescope-dark mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" 
+                                      class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gradescope-blue focus:border-gradescope-blue transition-colors duration-200 resize-none"
                                       placeholder="Tell us about your interest in EduPrep AI..."></textarea>
                         </div>
                         <button type="submit" 
-                                class="w-full bg-primary text-white px-8 py-4 rounded-2xl font-medium hover:bg-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                                class="w-full bg-gradescope-blue text-white px-6 py-3 rounded-md font-medium hover:bg-blue-600 transition-colors duration-200">
                             Send Message
                         </button>
                     </form>
@@ -219,14 +224,14 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-br from-soft-blue/10 to-white border-t border-gray-100/50 py-20">
-        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+    <footer class="bg-white border-t border-gray-200 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <div class="mb-8">
-                    <h3 class="text-3xl font-bold text-primary mb-3 tracking-tight">EduPrep AI</h3>
-                    <p class="text-text-secondary font-light text-lg">Redefining in-school education through mindful AI.</p>
+                <div class="mb-6">
+                    <h3 class="text-2xl font-semibold text-gradescope-dark mb-2">EduPrep AI</h3>
+                    <p class="text-gradescope-gray">Redefining in-school education through mindful AI.</p>
                 </div>
-                <div class="text-text-secondary text-sm font-light space-y-2">
+                <div class="text-gradescope-gray text-sm space-y-1">
                     <p>&copy; 2024 EduPrep AI. All rights reserved.</p>
                     <p>Built with ❤️ for educators and students everywhere.</p>
                 </div>
