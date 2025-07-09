@@ -11,30 +11,24 @@
             theme: {
                 extend: {
                     colors: {
-                        'cute-purple': '#8B5CF6',
-                        'cute-pink': '#EC4899',
-                        'cute-blue': '#3B82F6',
-                        'cute-green': '#10B981',
-                        'cute-yellow': '#F59E0B',
-                        'soft-purple': '#F3E8FF',
-                        'soft-pink': '#FCE7F3',
-                        'soft-blue': '#EFF6FF',
-                        'warm-gray': '#374151',
-                        'light-gray': '#F9FAFB',
+                        'primary': '#6366F1',
+                        'primary-light': '#A5B4FC',
+                        'accent': '#F1F5F9',
+                        'text-primary': '#1E293B',
+                        'text-secondary': '#64748B',
+                        'warm-bg': '#FAFAFA',
+                        'soft-accent': '#F8FAFC',
                     },
                     fontFamily: {
                         'sans': ['Inter', 'system-ui', 'sans-serif'],
-                        'display': ['Inter', 'system-ui', 'sans-serif'],
                     },
                     animation: {
-                        'bounce-slow': 'bounce 2s infinite',
-                        'pulse-slow': 'pulse 3s infinite',
-                        'float': 'float 6s ease-in-out infinite',
+                        'gentle-float': 'gentle-float 8s ease-in-out infinite',
                     },
                     keyframes: {
-                        float: {
+                        'gentle-float': {
                             '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' },
+                            '50%': { transform: 'translateY(-10px)' },
                         }
                     }
                 }
@@ -45,22 +39,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="font-sans text-warm-gray leading-relaxed bg-gradient-to-br from-soft-purple via-white to-soft-blue antialiased">
+<body class="font-sans text-text-primary leading-relaxed bg-warm-bg antialiased">
     <!-- Navigation -->
-    <nav class="bg-white/80 backdrop-blur-lg border-b border-purple-100 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="bg-white/95 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0 flex items-center">
-                    <div class="w-8 h-8 bg-gradient-to-r from-cute-purple to-cute-pink rounded-lg mr-3 flex items-center justify-center">
-                        <span class="text-white font-bold text-sm">✨</span>
+                    <div class="w-7 h-7 bg-primary rounded-lg mr-3 flex items-center justify-center">
+                        <span class="text-white text-sm">✨</span>
                     </div>
-                    <h1 class="text-2xl font-bold text-warm-gray bg-gradient-to-r from-cute-purple to-cute-pink bg-clip-text text-transparent">EduPrep AI</h1>
+                    <h1 class="text-xl font-semibold text-text-primary">EduPrep AI</h1>
                 </div>
                 <div class="hidden md:block">
-                    <div class="flex items-center space-x-6">
-                        <a href="#mission" class="text-warm-gray hover:text-cute-purple transition-colors duration-200 font-medium">Mission</a>
-                        <a href="#contact" class="text-warm-gray hover:text-cute-purple transition-colors duration-200 font-medium">Contact</a>
-                        <a href="#cta" class="bg-gradient-to-r from-cute-purple to-cute-pink text-white px-6 py-2.5 rounded-full hover:shadow-lg transition-all duration-200 font-medium transform hover:-translate-y-0.5">Get Started ✨</a>
+                    <div class="flex items-center space-x-8">
+                        <a href="#mission" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Mission</a>
+                        <a href="#contact" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Contact</a>
+                        <a href="#cta" class="bg-primary text-white px-5 py-2 rounded-lg hover:bg-indigo-600 transition-colors duration-200 font-medium">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -68,89 +62,81 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative py-20 lg:py-32 overflow-hidden">
-        <!-- Floating Elements -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute top-20 left-10 w-20 h-20 bg-cute-yellow/20 rounded-full animate-float"></div>
-            <div class="absolute top-40 right-20 w-16 h-16 bg-cute-pink/20 rounded-full animate-pulse-slow"></div>
-            <div class="absolute bottom-40 left-20 w-12 h-12 bg-cute-green/20 rounded-full animate-bounce-slow"></div>
-            <div class="absolute bottom-20 right-10 w-24 h-24 bg-cute-blue/20 rounded-full animate-float" style="animation-delay: 2s;"></div>
-        </div>
+    <section class="py-24 lg:py-32 bg-white relative">
+        <!-- Subtle floating element -->
+        <div class="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-gentle-float pointer-events-none"></div>
         
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-            <!-- Cute Graphic -->
+            <!-- Clean Icon -->
             <div class="mb-8">
-                <div class="inline-flex items-center justify-center w-32 h-32 bg-gradient-to-r from-cute-purple via-cute-pink to-cute-blue rounded-full shadow-2xl animate-float">
-                    <div class="text-6xl">🎓</div>
+                <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary to-primary-light rounded-2xl shadow-lg">
+                    <span class="text-3xl">🎓</span>
                 </div>
             </div>
             
-            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black text-warm-gray leading-tight mb-6">
-                Say Goodbye to 
-                <span class="bg-gradient-to-r from-cute-purple via-cute-pink to-cute-blue bg-clip-text text-transparent">Boring</span>
-                <br>Education! 🚀
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary leading-tight mb-6">
+                Reimagining Education
+                <br>
+                <span class="text-primary">One Student at a Time</span>
             </h1>
             
-            <p class="text-xl sm:text-2xl text-warm-gray/80 mb-8 max-w-4xl mx-auto leading-relaxed">
-                EduPrep AI makes learning <span class="bg-gradient-to-r from-cute-purple to-cute-pink bg-clip-text text-transparent font-bold">magical</span> ✨ 
-                — digitizing classroom workflows and automating grading so teachers can focus on what they love most: 
-                <span class="bg-gradient-to-r from-cute-green to-cute-blue bg-clip-text text-transparent font-bold">inspiring minds!</span> 🌟
+            <p class="text-xl text-text-secondary mb-12 max-w-3xl mx-auto leading-relaxed">
+                EduPrep AI transforms classroom workflows and automates grading, giving educators more time to focus on what matters most: <span class="text-text-primary font-semibold">inspiring young minds</span>.
             </p>
             
-            <!-- Fun Stats -->
-            <div class="flex flex-wrap justify-center gap-6 mb-12">
-                <div class="bg-white/60 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg border border-purple-100">
-                    <div class="text-2xl font-bold text-cute-purple">🎯 100%</div>
-                    <div class="text-sm text-warm-gray">Personalized Learning</div>
+            <!-- Clean Stats -->
+            <div class="flex flex-wrap justify-center gap-8 mb-12">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-primary mb-1">100%</div>
+                    <div class="text-sm text-text-secondary">Personalized Learning</div>
                 </div>
-                <div class="bg-white/60 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg border border-pink-100">
-                    <div class="text-2xl font-bold text-cute-pink">⚡ 5x</div>
-                    <div class="text-sm text-warm-gray">Faster Grading</div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-primary mb-1">5x</div>
+                    <div class="text-sm text-text-secondary">Faster Grading</div>
                 </div>
-                <div class="bg-white/60 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg border border-blue-100">
-                    <div class="text-2xl font-bold text-cute-blue">🌈 0</div>
-                    <div class="text-sm text-warm-gray">After-School Tutoring</div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-primary mb-1">0</div>
+                    <div class="text-sm text-text-secondary">Need for Tutoring</div>
                 </div>
             </div>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="#cta" class="group bg-gradient-to-r from-cute-purple to-cute-pink text-white px-10 py-4 rounded-full text-lg font-bold hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
-                    Start the Magic ✨
-                    <span class="inline-block ml-2 group-hover:animate-bounce">🚀</span>
+                <a href="#cta" class="bg-primary text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-indigo-600 transition-colors duration-200">
+                    Get Started
                 </a>
-                <a href="#mission" class="border-2 border-cute-purple/30 text-cute-purple px-10 py-4 rounded-full text-lg font-bold hover:bg-cute-purple hover:text-white transition-all duration-300 transform hover:-translate-y-1">
-                    See How It Works 🔮
+                <a href="#mission" class="border border-gray-300 text-text-primary px-8 py-3 rounded-lg text-lg font-medium hover:bg-gray-50 transition-colors duration-200">
+                    Learn More
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Mission Section -->
-    <section id="mission" class="py-20 bg-white/50 backdrop-blur-sm">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="mission" class="py-20 bg-soft-accent">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cute-green to-cute-blue rounded-full mb-6 animate-pulse-slow">
-                    <span class="text-3xl">🎯</span>
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-xl mb-6">
+                    <span class="text-2xl">🎯</span>
                 </div>
-                <h2 class="text-4xl sm:text-5xl font-black text-warm-gray mb-4">
-                    Our <span class="bg-gradient-to-r from-cute-green to-cute-blue bg-clip-text text-transparent">Mission</span> 💝
+                <h2 class="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
+                    Our Mission
                 </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-cute-green to-cute-blue mx-auto rounded-full"></div>
+                <div class="w-16 h-0.5 bg-primary mx-auto"></div>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <div class="bg-white/70 rounded-3xl p-8 shadow-lg border border-green-100 transform hover:scale-105 transition-all duration-300">
-                    <div class="text-4xl mb-4">🧠✨</div>
-                    <h3 class="text-xl font-bold text-warm-gray mb-4">Smart Learning That Thinks!</h3>
-                    <p class="text-warm-gray/80 leading-relaxed">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+                    <div class="text-3xl mb-4">🧠</div>
+                    <h3 class="text-xl font-semibold text-text-primary mb-4">Intelligent Learning</h3>
+                    <p class="text-text-secondary leading-relaxed">
                         Through mindful AI-driven test prep that never reveals answers directly, EduPrep AI guides every student toward independent thinking and deep mastery, allowing them to learn effectively at their own pace and style.
                     </p>
                 </div>
                 
-                <div class="bg-white/70 rounded-3xl p-8 shadow-lg border border-blue-100 transform hover:scale-105 transition-all duration-300">
-                    <div class="text-4xl mb-4">🏠➡️🏫</div>
-                    <h3 class="text-xl font-bold text-warm-gray mb-4">No More Second School!</h3>
-                    <p class="text-warm-gray/80 leading-relaxed">
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+                    <div class="text-3xl mb-4">🏫</div>
+                    <h3 class="text-xl font-semibold text-text-primary mb-4">One School, Complete Learning</h3>
+                    <p class="text-text-secondary leading-relaxed">
                         We're eliminating the need for afterschool private coaching by ensuring schools finally deliver personalized feedback, deep understanding, and the space to learn at every student's own pace.
                     </p>
                 </div>
@@ -159,28 +145,27 @@
     </section>
 
     <!-- Vision Section -->
-    <section class="py-20 bg-gradient-to-r from-soft-purple to-soft-pink">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cute-purple to-cute-pink rounded-full mb-6 animate-float">
-                    <span class="text-3xl">🔮</span>
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-xl mb-6">
+                    <span class="text-2xl">🔮</span>
                 </div>
-                <h2 class="text-4xl sm:text-5xl font-black text-warm-gray mb-4">
-                    Our <span class="bg-gradient-to-r from-cute-purple to-cute-pink bg-clip-text text-transparent">Vision</span> 🌈
+                <h2 class="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
+                    Our Vision
                 </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-cute-purple to-cute-pink mx-auto rounded-full"></div>
+                <div class="w-16 h-0.5 bg-primary mx-auto"></div>
             </div>
             
             <div class="max-w-4xl mx-auto">
-                <div class="bg-white/80 rounded-3xl p-10 shadow-2xl border border-purple-100 text-center">
-                    <div class="text-6xl mb-6">🌟</div>
-                    <h3 class="text-2xl font-bold text-warm-gray mb-6">The Future is Bright & Beautiful!</h3>
-                    <div class="space-y-6 text-warm-gray/80 leading-relaxed">
+                <div class="bg-accent rounded-2xl p-10 shadow-sm border border-gray-100 text-center">
+                    <div class="text-4xl mb-6">✨</div>
+                    <div class="space-y-6 text-text-secondary leading-relaxed">
                         <p class="text-lg">
-                            We're building a future where AI <span class="bg-gradient-to-r from-cute-purple to-cute-pink bg-clip-text text-transparent font-bold">enhances and never replaces</span> learning. A future where no child feels inadequate because the classroom moved too fast, and after-school coaching becomes obsolete. 🎯
+                            We're building a future where AI <span class="font-semibold text-text-primary">enhances and never replaces</span> learning. A future where no child feels inadequate because the classroom moved too fast, and after-school coaching becomes obsolete.
                         </p>
                         <p class="text-lg">
-                            Our AI asks better questions instead of giving answers, helping students think critically, while teachers are freed from mechanical grading to focus on <span class="bg-gradient-to-r from-cute-green to-cute-blue bg-clip-text text-transparent font-bold">inspiring minds!</span> ✨
+                            Our AI asks better questions instead of giving answers, helping students think critically, while teachers are freed from mechanical grading to focus on <span class="font-semibold text-text-primary">inspiring minds</span>.
                         </p>
                     </div>
                 </div>
@@ -189,148 +174,138 @@
     </section>
 
     <!-- Problem Statement -->
-    <section class="py-20 bg-white/50 backdrop-blur-sm">
+    <section class="py-20 bg-soft-accent">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cute-yellow to-cute-pink rounded-full mb-8 animate-bounce-slow">
-                <span class="text-3xl">💔</span>
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-xl mb-8">
+                <span class="text-2xl">💔</span>
             </div>
-            <h2 class="text-4xl sm:text-5xl font-black text-warm-gray mb-12">
-                The <span class="bg-gradient-to-r from-cute-yellow to-cute-pink bg-clip-text text-transparent">Heartbreaking</span> Reality 😢
+            <h2 class="text-3xl sm:text-4xl font-bold text-text-primary mb-12">
+                The Reality We're Changing
             </h2>
             
-            <div class="bg-white rounded-3xl p-10 shadow-2xl border-l-8 border-cute-yellow">
-                <div class="text-5xl mb-6">😔</div>
-                <blockquote class="text-2xl sm:text-3xl text-warm-gray italic leading-relaxed mb-6 font-medium">
+            <div class="bg-white rounded-2xl p-10 shadow-sm border border-gray-100 border-l-4 border-primary">
+                <blockquote class="text-xl sm:text-2xl text-text-secondary italic leading-relaxed mb-6 font-medium">
                     "A young student attends a second school after returning from school."
                 </blockquote>
-                <div class="text-lg text-warm-gray/80 mb-6">
+                <div class="text-lg text-text-secondary mb-6">
                     This shouldn't be the reality for any child. 
                 </div>
-                <div class="inline-flex items-center bg-gradient-to-r from-cute-green to-cute-blue text-white px-8 py-3 rounded-full font-bold text-lg">
-                    But we're changing that! 🌟✨
+                <div class="inline-flex items-center bg-primary text-white px-6 py-3 rounded-lg font-medium text-lg">
+                    But we're changing that
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Call to Action Section -->
-    <section id="cta" class="py-20 bg-gradient-to-br from-soft-blue to-soft-purple relative overflow-hidden">
-        <!-- Floating Elements -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute top-10 left-10 w-16 h-16 bg-cute-pink/20 rounded-full animate-float"></div>
-            <div class="absolute bottom-10 right-10 w-20 h-20 bg-cute-yellow/20 rounded-full animate-pulse-slow"></div>
-            <div class="absolute top-1/2 left-1/4 w-12 h-12 bg-cute-green/20 rounded-full animate-bounce-slow"></div>
-        </div>
+    <section id="cta" class="py-20 bg-white relative">
+        <!-- Subtle background element -->
+        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
         
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-            <div class="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-cute-purple via-cute-pink to-cute-blue rounded-full mb-8 animate-float">
-                <span class="text-4xl">🚀</span>
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-xl mb-8">
+                <span class="text-2xl">🚀</span>
             </div>
             
-            <h2 class="text-5xl sm:text-6xl font-black text-warm-gray mb-6 leading-tight">
-                Ready to Make 
-                <span class="bg-gradient-to-r from-cute-purple via-cute-pink to-cute-blue bg-clip-text text-transparent">Magic</span> 
-                Happen? ✨
+            <h2 class="text-3xl sm:text-4xl font-bold text-text-primary mb-6 leading-tight">
+                Ready to Transform Education?
             </h2>
             
-            <p class="text-xl text-warm-gray/80 mb-12 max-w-3xl mx-auto leading-relaxed">
-                Join us in creating a future where every student can learn at their own pace and every teacher can focus on what they do best: 
-                <span class="bg-gradient-to-r from-cute-green to-cute-blue bg-clip-text text-transparent font-bold">creating wonder!</span> 🌟
+            <p class="text-xl text-text-secondary mb-12 max-w-3xl mx-auto leading-relaxed">
+                Join us in creating a future where every student can learn at their own pace and every teacher can focus on what they do best: <span class="font-semibold text-text-primary">inspiring minds</span>.
             </p>
             
-            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a href="mailto:contact@eduprep-ai.com" 
-                   class="group bg-gradient-to-r from-cute-purple to-cute-pink text-white px-12 py-5 rounded-full text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105">
-                    Let's Create Magic Together! ✨
-                    <span class="inline-block ml-2 group-hover:animate-bounce">🎯</span>
+                   class="bg-primary text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-indigo-600 transition-colors duration-200">
+                    Get in Touch
                 </a>
                 <a href="#contact" 
-                   class="border-3 border-white/50 text-warm-gray px-12 py-5 rounded-full text-xl font-bold hover:bg-white hover:text-cute-purple transition-all duration-300 transform hover:-translate-y-2 bg-white/20 backdrop-blur-sm">
-                    Tell Me More! 🔮
+                   class="border border-gray-300 text-text-primary px-8 py-3 rounded-lg text-lg font-medium hover:bg-gray-50 transition-colors duration-200">
+                    Learn More
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
+    <section id="contact" class="py-20 bg-soft-accent">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cute-blue to-cute-green rounded-full mb-6 animate-pulse-slow">
-                    <span class="text-3xl">💌</span>
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-xl mb-6">
+                    <span class="text-2xl">💌</span>
                 </div>
-                <h2 class="text-4xl sm:text-5xl font-black text-warm-gray mb-4">
-                    Let's <span class="bg-gradient-to-r from-cute-blue to-cute-green bg-clip-text text-transparent">Connect</span>! 💫
+                <h2 class="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
+                    Let's Connect
                 </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-cute-blue to-cute-green mx-auto rounded-full mb-4"></div>
-                <p class="text-lg text-warm-gray/80">
-                    Ready to revolutionize education? We'd love to hear from you! ✨
+                <div class="w-16 h-0.5 bg-primary mx-auto mb-4"></div>
+                <p class="text-lg text-text-secondary">
+                    Ready to revolutionize education? We'd love to hear from you.
                 </p>
             </div>
             
             <div class="grid md:grid-cols-2 gap-12 items-start">
                 <!-- Contact Info -->
                 <div class="space-y-8">
-                    <div class="bg-gradient-to-r from-soft-blue to-soft-purple rounded-3xl p-8 border border-blue-100">
-                        <div class="text-4xl mb-4">📧✨</div>
-                        <h3 class="text-2xl font-bold text-warm-gray mb-6">Reach Out & Say Hi!</h3>
+                    <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+                        <div class="text-3xl mb-4">📧</div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-6">Get in Touch</h3>
                         <div class="space-y-4">
                             <div class="flex items-center">
-                                <div class="w-6 h-6 text-cute-blue mr-4">
-                                    <span class="text-xl">💌</span>
+                                <div class="w-6 h-6 text-primary mr-4">
+                                    <span class="text-lg">💌</span>
                                 </div>
-                                <a href="mailto:contact@eduprep-ai.com" class="text-warm-gray hover:text-cute-blue transition-colors font-medium">
+                                <a href="mailto:contact@eduprep-ai.com" class="text-text-secondary hover:text-primary transition-colors font-medium">
                                     contact@eduprep-ai.com
                                 </a>
                             </div>
                             <div class="flex items-center">
-                                <div class="w-6 h-6 text-cute-blue mr-4">
-                                    <span class="text-xl">📍</span>
+                                <div class="w-6 h-6 text-primary mr-4">
+                                    <span class="text-lg">📍</span>
                                 </div>
-                                <span class="text-warm-gray font-medium">San Francisco, CA</span>
+                                <span class="text-text-secondary font-medium">San Francisco, CA</span>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="bg-gradient-to-r from-soft-pink to-soft-purple rounded-3xl p-8 border border-pink-100">
-                        <div class="text-4xl mb-4">👩‍🏫🎯</div>
-                        <h3 class="text-2xl font-bold text-warm-gray mb-6">For Amazing Educators!</h3>
-                        <p class="text-warm-gray/80 leading-relaxed">
-                            Interested in piloting EduPrep AI in your classroom? We're looking for forward-thinking educators to join our early access program and help us make education magical! ✨
+                    <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+                        <div class="text-3xl mb-4">👩‍🏫</div>
+                        <h3 class="text-xl font-semibold text-text-primary mb-6">For Educators</h3>
+                        <p class="text-text-secondary leading-relaxed">
+                            Interested in piloting EduPrep AI in your classroom? We're looking for forward-thinking educators to join our early access program.
                         </p>
                     </div>
                 </div>
 
-                <!-- Cute Contact Form -->
-                <div class="bg-gradient-to-br from-white to-soft-blue rounded-3xl border-2 border-cute-blue/20 p-8 shadow-2xl">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl border border-gray-100 p-8 shadow-sm">
                     <div class="text-center mb-6">
-                        <div class="text-4xl mb-2">💫</div>
-                        <h3 class="text-2xl font-bold text-warm-gray">Send Us Some Magic!</h3>
+                        <div class="text-3xl mb-2">💌</div>
+                        <h3 class="text-xl font-semibold text-text-primary">Send Us a Message</h3>
                     </div>
                     
                     <form class="space-y-6">
                         <div>
-                            <label for="name" class="block text-sm font-bold text-warm-gray mb-2">Your Magical Name ✨</label>
+                            <label for="name" class="block text-sm font-medium text-text-primary mb-2">Name</label>
                             <input type="text" id="name" name="name" 
-                                   class="w-full px-4 py-3 border-2 border-cute-blue/20 rounded-2xl focus:outline-none focus:ring-2 focus:ring-cute-blue/30 focus:border-cute-blue transition-all duration-300 bg-white/80"
-                                   placeholder="What should we call you?">
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+                                   placeholder="Your name">
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-bold text-warm-gray mb-2">Your Email Address 📧</label>
+                            <label for="email" class="block text-sm font-medium text-text-primary mb-2">Email</label>
                             <input type="email" id="email" name="email" 
-                                   class="w-full px-4 py-3 border-2 border-cute-blue/20 rounded-2xl focus:outline-none focus:ring-2 focus:ring-cute-blue/30 focus:border-cute-blue transition-all duration-300 bg-white/80"
-                                   placeholder="your.magical.email@example.com">
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+                                   placeholder="your.email@example.com">
                         </div>
                         <div>
-                            <label for="message" class="block text-sm font-bold text-warm-gray mb-2">Your Message 💝</label>
+                            <label for="message" class="block text-sm font-medium text-text-primary mb-2">Message</label>
                             <textarea id="message" name="message" rows="4" 
-                                      class="w-full px-4 py-3 border-2 border-cute-blue/20 rounded-2xl focus:outline-none focus:ring-2 focus:ring-cute-blue/30 focus:border-cute-blue transition-all duration-300 bg-white/80 resize-none"
-                                      placeholder="Tell us about your interest in EduPrep AI and how we can help make education more magical! ✨"></textarea>
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none"
+                                      placeholder="Tell us about your interest in EduPrep AI..."></textarea>
                         </div>
                         <button type="submit" 
-                                class="group w-full bg-gradient-to-r from-cute-blue to-cute-green text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                            Send the Magic! ✨
-                            <span class="inline-block ml-2 group-hover:animate-bounce">🚀</span>
+                                class="w-full bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-indigo-600 transition-colors duration-200">
+                            Send Message
                         </button>
                     </form>
                 </div>
@@ -339,21 +314,21 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-soft-purple to-soft-blue border-t border-purple-200 py-16">
+    <footer class="bg-white border-t border-gray-200 py-16">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <div class="mb-8">
-                    <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cute-purple to-cute-pink rounded-full mb-4 animate-pulse-slow">
-                        <span class="text-2xl">✨</span>
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-primary rounded-lg mb-4">
+                        <span class="text-lg">✨</span>
                     </div>
-                    <h3 class="text-3xl font-black text-warm-gray mb-3">
-                        <span class="bg-gradient-to-r from-cute-purple to-cute-pink bg-clip-text text-transparent">EduPrep AI</span>
+                    <h3 class="text-2xl font-semibold text-text-primary mb-3">
+                        EduPrep AI
                     </h3>
-                    <p class="text-warm-gray/80 text-lg">Making education magical, one student at a time! 🌟</p>
+                    <p class="text-text-secondary text-lg">Making education better, one student at a time</p>
                 </div>
-                <div class="text-warm-gray/70 space-y-2">
-                    <p>&copy; 2024 EduPrep AI. All rights reserved. ✨</p>
-                    <p>Built with 💜 for educators and students everywhere! 🚀</p>
+                <div class="text-text-secondary space-y-2">
+                    <p>&copy; 2024 EduPrep AI. All rights reserved.</p>
+                    <p>Built with care for educators and students everywhere</p>
                 </div>
             </div>
         </div>
