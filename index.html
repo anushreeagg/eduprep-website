@@ -11,16 +11,17 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#6366F1',
-                        'primary-light': '#A5B4FC',
-                        'accent': '#F1F5F9',
-                        'text-primary': '#1E293B',
-                        'text-secondary': '#64748B',
-                        'warm-bg': '#FAFAFA',
-                        'soft-accent': '#F8FAFC',
+                        'primary': '#007AFF',
+                        'primary-light': '#40A9FF',
+                        'accent': '#F5F5F5',
+                        'text-primary': '#333333',
+                        'text-secondary': '#666666',
+                        'warm-bg': '#F5F5F5',
+                        'soft-accent': '#FFFFFF',
+                        'border-light': '#E5E5E5',
                     },
                     fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'sans': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', 'sans-serif'],
                     },
                     animation: {
                         'gentle-float': 'gentle-float 8s ease-in-out infinite',
@@ -37,24 +38,24 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
-<body class="font-sans text-text-primary leading-relaxed bg-warm-bg antialiased">
+  <body class="font-sans text-text-primary leading-relaxed bg-warm-bg antialiased" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
     <!-- Navigation -->
-    <nav class="bg-white/95 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
+    <nav class="bg-soft-accent border-b border-border-light sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0 flex items-center">
-                    <div class="w-7 h-7 bg-primary rounded-lg mr-3 flex items-center justify-center">
+                    <div class="w-8 h-8 bg-primary rounded-lg mr-3 flex items-center justify-center">
                         <span class="text-white text-sm">✨</span>
                     </div>
-                    <h1 class="text-xl font-semibold text-text-primary">EduPrep AI</h1>
+                    <h1 class="text-xl font-medium text-text-primary">EduPrep AI</h1>
                 </div>
                 <div class="hidden md:block">
                     <div class="flex items-center space-x-8">
-                        <a href="#mission" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Mission</a>
-                        <a href="#contact" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Contact</a>
-                        <a href="#cta" class="bg-primary text-white px-5 py-2 rounded-lg hover:bg-indigo-600 transition-colors duration-200 font-medium">Get Started</a>
+                        <a href="#mission" class="text-text-secondary hover:text-primary transition-colors duration-200">Mission</a>
+                        <a href="#contact" class="text-text-secondary hover:text-primary transition-colors duration-200">Contact</a>
+                        <a href="#cta" class="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-light transition-colors duration-200">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -62,49 +63,49 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="py-24 lg:py-32 bg-white relative">
+    <section class="py-24 lg:py-32 bg-soft-accent relative">
         <!-- Subtle floating element -->
         <div class="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-gentle-float pointer-events-none"></div>
         
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
             <!-- Clean Icon -->
             <div class="mb-8">
-                <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary to-primary-light rounded-2xl shadow-lg">
+                <div class="inline-flex items-center justify-center w-20 h-20 bg-primary rounded-2xl shadow-sm">
                     <span class="text-3xl">🎓</span>
                 </div>
             </div>
             
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary leading-tight mb-6">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-medium text-text-primary leading-tight mb-6">
                 Reimagining Education
                 <br>
                 <span class="text-primary">One Student at a Time</span>
             </h1>
             
             <p class="text-xl text-text-secondary mb-12 max-w-3xl mx-auto leading-relaxed">
-                EduPrep AI transforms classroom workflows and automates grading, giving educators more time to focus on what matters most: <span class="text-text-primary font-semibold">inspiring young minds</span>.
+                EduPrep AI transforms classroom workflows and automates grading, giving educators more time to focus on what matters most: <span class="text-text-primary">inspiring young minds</span>.
             </p>
             
             <!-- Clean Stats -->
-            <div class="flex flex-wrap justify-center gap-8 mb-12">
+            <div class="flex flex-wrap justify-center gap-12 mb-12">
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-primary mb-1">100%</div>
+                    <div class="text-3xl font-medium text-primary mb-1">100%</div>
                     <div class="text-sm text-text-secondary">Personalized Learning</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-primary mb-1">5x</div>
+                    <div class="text-3xl font-medium text-primary mb-1">5x</div>
                     <div class="text-sm text-text-secondary">Faster Grading</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-primary mb-1">0</div>
+                    <div class="text-3xl font-medium text-primary mb-1">0</div>
                     <div class="text-sm text-text-secondary">Need for Tutoring</div>
                 </div>
             </div>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="#cta" class="bg-primary text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-indigo-600 transition-colors duration-200">
+                <a href="#cta" class="bg-primary text-white px-6 py-3 rounded-md hover:bg-primary-light transition-colors duration-200">
                     Get Started
                 </a>
-                <a href="#mission" class="border border-gray-300 text-text-primary px-8 py-3 rounded-lg text-lg font-medium hover:bg-gray-50 transition-colors duration-200">
+                <a href="#mission" class="border border-border-light text-text-primary px-6 py-3 rounded-md hover:bg-gray-50 transition-colors duration-200">
                     Learn More
                 </a>
             </div>
@@ -112,30 +113,30 @@
     </section>
 
     <!-- Mission Section -->
-    <section id="mission" class="py-20 bg-soft-accent">
+    <section id="mission" class="py-20 bg-warm-bg">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-xl mb-6">
                     <span class="text-2xl">🎯</span>
                 </div>
-                <h2 class="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
+                <h2 class="text-3xl sm:text-4xl font-medium text-text-primary mb-4">
                     Our Mission
                 </h2>
                 <div class="w-16 h-0.5 bg-primary mx-auto"></div>
             </div>
             
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+                <div class="bg-soft-accent rounded-xl p-8 border border-border-light">
                     <div class="text-3xl mb-4">🧠</div>
-                    <h3 class="text-xl font-semibold text-text-primary mb-4">Intelligent Learning</h3>
+                    <h3 class="text-xl font-medium text-text-primary mb-4">Intelligent Learning</h3>
                     <p class="text-text-secondary leading-relaxed">
                         Through mindful AI-driven test prep that never reveals answers directly, EduPrep AI guides every student toward independent thinking and deep mastery, allowing them to learn effectively at their own pace and style.
                     </p>
                 </div>
                 
-                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+                <div class="bg-soft-accent rounded-xl p-8 border border-border-light">
                     <div class="text-3xl mb-4">🏫</div>
-                    <h3 class="text-xl font-semibold text-text-primary mb-4">One School, Complete Learning</h3>
+                    <h3 class="text-xl font-medium text-text-primary mb-4">One School, Complete Learning</h3>
                     <p class="text-text-secondary leading-relaxed">
                         We're eliminating the need for afterschool private coaching by ensuring schools finally deliver personalized feedback, deep understanding, and the space to learn at every student's own pace.
                     </p>
@@ -145,27 +146,27 @@
     </section>
 
     <!-- Vision Section -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-soft-accent">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-xl mb-6">
                     <span class="text-2xl">🔮</span>
                 </div>
-                <h2 class="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
+                <h2 class="text-3xl sm:text-4xl font-medium text-text-primary mb-4">
                     Our Vision
                 </h2>
                 <div class="w-16 h-0.5 bg-primary mx-auto"></div>
             </div>
             
             <div class="max-w-4xl mx-auto">
-                <div class="bg-accent rounded-2xl p-10 shadow-sm border border-gray-100 text-center">
+                <div class="bg-warm-bg rounded-xl p-10 border border-border-light text-center">
                     <div class="text-4xl mb-6">✨</div>
                     <div class="space-y-6 text-text-secondary leading-relaxed">
                         <p class="text-lg">
-                            We're building a future where AI <span class="font-semibold text-text-primary">enhances and never replaces</span> learning. A future where no child feels inadequate because the classroom moved too fast, and after-school coaching becomes obsolete.
+                            We're building a future where AI <span class="text-text-primary font-medium">enhances and never replaces</span> learning. A future where no child feels inadequate because the classroom moved too fast, and after-school coaching becomes obsolete.
                         </p>
                         <p class="text-lg">
-                            Our AI asks better questions instead of giving answers, helping students think critically, while teachers are freed from mechanical grading to focus on <span class="font-semibold text-text-primary">inspiring minds</span>.
+                            Our AI asks better questions instead of giving answers, helping students think critically, while teachers are freed from mechanical grading to focus on <span class="text-text-primary font-medium">inspiring minds</span>.
                         </p>
                     </div>
                 </div>
@@ -174,23 +175,23 @@
     </section>
 
     <!-- Problem Statement -->
-    <section class="py-20 bg-soft-accent">
+    <section class="py-20 bg-warm-bg">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-xl mb-8">
                 <span class="text-2xl">💔</span>
             </div>
-            <h2 class="text-3xl sm:text-4xl font-bold text-text-primary mb-12">
+            <h2 class="text-3xl sm:text-4xl font-medium text-text-primary mb-12">
                 The Reality We're Changing
             </h2>
             
-            <div class="bg-white rounded-2xl p-10 shadow-sm border border-gray-100 border-l-4 border-primary">
-                <blockquote class="text-xl sm:text-2xl text-text-secondary italic leading-relaxed mb-6 font-medium">
+            <div class="bg-soft-accent rounded-xl p-10 border border-border-light border-l-4 border-primary">
+                <blockquote class="text-xl sm:text-2xl text-text-secondary italic leading-relaxed mb-6">
                     "A young student attends a second school after returning from school."
                 </blockquote>
                 <div class="text-lg text-text-secondary mb-6">
                     This shouldn't be the reality for any child. 
                 </div>
-                <div class="inline-flex items-center bg-primary text-white px-6 py-3 rounded-lg font-medium text-lg">
+                <div class="inline-flex items-center bg-primary text-white px-6 py-3 rounded-md">
                     But we're changing that
                 </div>
             </div>
@@ -198,7 +199,7 @@
     </section>
 
     <!-- Call to Action Section -->
-    <section id="cta" class="py-20 bg-white relative">
+    <section id="cta" class="py-20 bg-soft-accent relative">
         <!-- Subtle background element -->
         <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
         
@@ -207,21 +208,21 @@
                 <span class="text-2xl">🚀</span>
             </div>
             
-            <h2 class="text-3xl sm:text-4xl font-bold text-text-primary mb-6 leading-tight">
+            <h2 class="text-3xl sm:text-4xl font-medium text-text-primary mb-6 leading-tight">
                 Ready to Transform Education?
             </h2>
             
             <p class="text-xl text-text-secondary mb-12 max-w-3xl mx-auto leading-relaxed">
-                Join us in creating a future where every student can learn at their own pace and every teacher can focus on what they do best: <span class="font-semibold text-text-primary">inspiring minds</span>.
+                Join us in creating a future where every student can learn at their own pace and every teacher can focus on what they do best: <span class="text-text-primary font-medium">inspiring minds</span>.
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a href="mailto:contact@eduprep-ai.com" 
-                   class="bg-primary text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-indigo-600 transition-colors duration-200">
+                   class="bg-primary text-white px-6 py-3 rounded-md hover:bg-primary-light transition-colors duration-200">
                     Get in Touch
                 </a>
                 <a href="#contact" 
-                   class="border border-gray-300 text-text-primary px-8 py-3 rounded-lg text-lg font-medium hover:bg-gray-50 transition-colors duration-200">
+                   class="border border-border-light text-text-primary px-6 py-3 rounded-md hover:bg-gray-50 transition-colors duration-200">
                     Learn More
                 </a>
             </div>
@@ -229,13 +230,13 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-soft-accent">
+    <section id="contact" class="py-20 bg-warm-bg">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-xl mb-6">
                     <span class="text-2xl">💌</span>
                 </div>
-                <h2 class="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
+                <h2 class="text-3xl sm:text-4xl font-medium text-text-primary mb-4">
                     Let's Connect
                 </h2>
                 <div class="w-16 h-0.5 bg-primary mx-auto mb-4"></div>
@@ -247,15 +248,15 @@
             <div class="grid md:grid-cols-2 gap-12 items-start">
                 <!-- Contact Info -->
                 <div class="space-y-8">
-                    <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+                    <div class="bg-soft-accent rounded-xl p-8 border border-border-light">
                         <div class="text-3xl mb-4">📧</div>
-                        <h3 class="text-xl font-semibold text-text-primary mb-6">Get in Touch</h3>
+                        <h3 class="text-xl font-medium text-text-primary mb-6">Get in Touch</h3>
                         <div class="space-y-4">
                             <div class="flex items-center">
                                 <div class="w-6 h-6 text-primary mr-4">
                                     <span class="text-lg">💌</span>
                                 </div>
-                                <a href="mailto:contact@eduprep-ai.com" class="text-text-secondary hover:text-primary transition-colors font-medium">
+                                <a href="mailto:contact@eduprep-ai.com" class="text-text-secondary hover:text-primary transition-colors">
                                     contact@eduprep-ai.com
                                 </a>
                             </div>
@@ -263,14 +264,14 @@
                                 <div class="w-6 h-6 text-primary mr-4">
                                     <span class="text-lg">📍</span>
                                 </div>
-                                <span class="text-text-secondary font-medium">San Francisco, CA</span>
+                                <span class="text-text-secondary">San Francisco, CA</span>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+                    <div class="bg-soft-accent rounded-xl p-8 border border-border-light">
                         <div class="text-3xl mb-4">👩‍🏫</div>
-                        <h3 class="text-xl font-semibold text-text-primary mb-6">For Educators</h3>
+                        <h3 class="text-xl font-medium text-text-primary mb-6">For Educators</h3>
                         <p class="text-text-secondary leading-relaxed">
                             Interested in piloting EduPrep AI in your classroom? We're looking for forward-thinking educators to join our early access program.
                         </p>
@@ -278,33 +279,33 @@
                 </div>
 
                 <!-- Contact Form -->
-                <div class="bg-white rounded-2xl border border-gray-100 p-8 shadow-sm">
+                <div class="bg-soft-accent rounded-xl border border-border-light p-8">
                     <div class="text-center mb-6">
                         <div class="text-3xl mb-2">💌</div>
-                        <h3 class="text-xl font-semibold text-text-primary">Send Us a Message</h3>
+                        <h3 class="text-xl font-medium text-text-primary">Send Us a Message</h3>
                     </div>
                     
                     <form class="space-y-6">
                         <div>
-                            <label for="name" class="block text-sm font-medium text-text-primary mb-2">Name</label>
+                            <label for="name" class="block text-sm text-text-primary mb-2">Name</label>
                             <input type="text" id="name" name="name" 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+                                   class="w-full px-4 py-3 border border-border-light rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
                                    placeholder="Your name">
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-medium text-text-primary mb-2">Email</label>
+                            <label for="email" class="block text-sm text-text-primary mb-2">Email</label>
                             <input type="email" id="email" name="email" 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+                                   class="w-full px-4 py-3 border border-border-light rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
                                    placeholder="your.email@example.com">
                         </div>
                         <div>
-                            <label for="message" class="block text-sm font-medium text-text-primary mb-2">Message</label>
+                            <label for="message" class="block text-sm text-text-primary mb-2">Message</label>
                             <textarea id="message" name="message" rows="4" 
-                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none"
+                                      class="w-full px-4 py-3 border border-border-light rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none"
                                       placeholder="Tell us about your interest in EduPrep AI..."></textarea>
                         </div>
                         <button type="submit" 
-                                class="w-full bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-indigo-600 transition-colors duration-200">
+                                class="w-full bg-primary text-white px-6 py-3 rounded-md hover:bg-primary-light transition-colors duration-200">
                             Send Message
                         </button>
                     </form>
@@ -314,17 +315,17 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 py-16">
+    <footer class="bg-soft-accent border-t border-border-light py-16">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <div class="mb-8">
                     <div class="inline-flex items-center justify-center w-12 h-12 bg-primary rounded-lg mb-4">
                         <span class="text-lg">✨</span>
                     </div>
-                    <h3 class="text-2xl font-semibold text-text-primary mb-3">
+                    <h3 class="text-2xl font-medium text-text-primary mb-3">
                         EduPrep AI
                     </h3>
-                    <p class="text-text-secondary text-lg">Making education better, one student at a time</p>
+                    <p class="text-text-secondary">Making education better, one student at a time</p>
                 </div>
                 <div class="text-text-secondary space-y-2">
                     <p>&copy; 2024 EduPrep AI. All rights reserved.</p>
