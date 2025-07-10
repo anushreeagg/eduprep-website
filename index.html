@@ -6,23 +6,50 @@
     <title>EduPrep AI - Redefining In-School Education</title>
     <meta name="description" content="EduPrep AI digitizes classroom workflows and automates grading, freeing educators to focus on teaching while providing personalized AI-driven test prep.">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+              Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #f5f5f5;
+        }
+        
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 1.2rem;
+            color: #555;
+        }
+        
+        code {
+            font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+        }
+    </style>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         'primary': '#1e3a5f',
-                        'primary-light': '#7cb9e8',
+                        'primary-light': '#4a6fa5',
                         'accent': '#f8f9fa',
-                        'text-primary': '#1e3a5f',
-                        'text-secondary': '#4a6782',
-                        'warm-bg': '#fff9f2',
+                        'text-primary': '#333333',
+                        'text-secondary': '#555555',
+                        'warm-bg': '#f5f5f5',
                         'soft-accent': '#ffffff',
                         'border-light': '#e2e8f0',
                         'accent-subtle': '#e6f3ff',
-                        'hopeful-blue': '#7cb9e8',
-                        'hopeful-yellow': '#ffdd67',
-                        'hopeful-coral': '#ffaa8c',
+                        'hopeful-blue': '#4a6fa5',
+                        'hopeful-yellow': '#f0c14b',
+                        'hopeful-coral': '#ff9b7a',
                     },
                     fontFamily: {
                         'sans': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', 'sans-serif'],
@@ -45,299 +72,80 @@
 
 </head>
 <body class="font-sans text-text-primary leading-relaxed bg-warm-bg antialiased">
-    <!-- Navigation -->
-    <nav class="bg-white/95 backdrop-blur-sm border-b border-border-light sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0 flex items-center">
-                    <div class="w-7 h-7 bg-hopeful-blue rounded-lg mr-3 flex items-center justify-center">
-                        <span class="text-white text-sm">✨</span>
+    <div class="app min-h-screen flex flex-col">
+        <!-- Navigation -->
+        <nav class="bg-white shadow-sm sticky top-0 z-50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-xl font-semibold text-text-primary"><span class="text-3xl">🎓</span> EduPrep AI</h1>
                     </div>
-                    <h1 class="text-xl font-semibold text-text-primary">EduPrep AI</h1>
-                </div>
-                <div class="hidden md:block">
-                    <div class="flex items-center space-x-8">
-                        <a href="#mission" class="text-text-secondary hover:text-text-primary transition-colors duration-200 font-medium">Mission</a>
-                        <a href="#contact" class="text-text-secondary hover:text-text-primary transition-colors duration-200 font-medium">Contact</a>
-                        <a href="#cta" class="bg-hopeful-blue text-white px-5 py-2 rounded-md hover:bg-primary-light transition-colors duration-200 font-medium">Get Started</a>
+                    <div class="hidden md:block">
+                        <div class="flex items-center">
+                            <a href="#contact" class="bg-hopeful-blue text-white px-5 py-2 rounded hover:bg-primary-light transition-colors duration-200 font-medium">Contact</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Hero Section -->
-    <section class="py-24 lg:py-32 bg-hopeful-yellow/10 relative">
-        <!-- Subtle floating element -->
-        <div class="absolute top-1/4 right-1/4 w-64 h-64 bg-hopeful-blue/10 rounded-full blur-3xl animate-gentle-float pointer-events-none"></div>
-        
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-            <!-- Clean Icon -->
-            <div class="mb-8">
-                <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-hopeful-blue to-hopeful-coral/70 rounded-2xl shadow-lg">
-                    <span class="text-3xl">🎓</span>
-                </div>
-            </div>
-            
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-text-primary leading-tight mb-6">
-                Reimagining Education
-                <br>
-                <span class="text-primary">One Student at a Time</span>
-            </h1>
-            
-            <p class="text-xl text-text-secondary mb-12 max-w-3xl mx-auto leading-relaxed">
-                EduPrep AI transforms classroom workflows and automates grading, giving educators more time to focus on what matters most: <span class="text-text-primary font-semibold">inspiring young minds</span>.
-            </p>
-            
-            <!-- Clean Stats -->
-            <div class="flex flex-wrap justify-center gap-8 mb-12">
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-hopeful-blue mb-1">100%</div>
-                    <div class="text-sm text-text-secondary">Personalized Learning</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-hopeful-coral mb-1">5x</div>
-                    <div class="text-sm text-text-secondary">Faster Grading</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-hopeful-yellow mb-1">0</div>
-                    <div class="text-sm text-text-secondary">Need for Tutoring</div>
-                </div>
-            </div>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="#cta" class="bg-hopeful-blue text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-primary-light transition-colors duration-200">
-                    Get Started
-                </a>
-                <a href="#mission" class="border border-hopeful-yellow text-text-primary px-8 py-3 rounded-md text-lg font-medium hover:bg-hopeful-yellow/10 transition-colors duration-200">
-                    Learn More
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mission Section -->
-    <section id="mission" class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-hopeful-yellow/20 rounded-xl mb-6">
-                    <span class="text-2xl text-primary">🎯</span>
-                </div>
-                <h2 class="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
-                    Our Mission
-                </h2>
-                <div class="w-16 h-0.5 bg-primary/30 mx-auto"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-hopeful-blue/10 rounded-md p-8 border-t-2 border-hopeful-blue">
-                    <div class="text-3xl mb-4 text-hopeful-blue">🧠</div>
-                    <h3 class="text-xl font-semibold text-text-primary mb-4">Intelligent Learning</h3>
-                    <p class="text-text-secondary leading-relaxed">
-                        Through mindful AI-driven test prep that never reveals answers directly, EduPrep AI guides every student toward independent thinking and deep mastery, allowing them to learn effectively at their own pace and style.
-                    </p>
-                </div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex-1">
+            <!-- Hero Section -->
+            <section class="py-8 lg:py-12 relative">
+                <!-- Subtle floating element -->
+                <div class="absolute top-1/4 right-1/4 w-64 h-64 bg-hopeful-blue/10 rounded-full blur-3xl animate-gentle-float pointer-events-none"></div>
                 
-                <div class="bg-hopeful-coral/10 rounded-md p-8 border-t-2 border-hopeful-coral">
-                    <div class="text-3xl mb-4 text-hopeful-coral">🏫</div>
-                    <h3 class="text-xl font-semibold text-text-primary mb-4">One School, Complete Learning</h3>
-                    <p class="text-text-secondary leading-relaxed">
-                        We're eliminating the need for afterschool private coaching by ensuring schools finally deliver personalized feedback, deep understanding, and the space to learn at every student's own pace.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Vision Section -->
-    <section class="py-20 bg-hopeful-coral/10">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-white rounded-xl mb-6">
-                    <span class="text-2xl text-hopeful-coral">🔮</span>
-                </div>
-                <h2 class="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
-                    Our Vision
-                </h2>
-                <div class="w-16 h-0.5 bg-hopeful-coral mx-auto"></div>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="bg-white rounded-md p-10 border-t-2 border-hopeful-coral text-center">
-                    <div class="text-4xl mb-6 text-hopeful-coral">✨</div>
-                    <div class="space-y-6 text-text-secondary leading-relaxed">
-                        <p class="text-lg">
-                            We're building a future where AI <span class="font-semibold text-text-primary">enhances and never replaces</span> learning. A future where no child feels inadequate because the classroom moved too fast, and after-school coaching becomes obsolete.
-                        </p>
-                        <p class="text-lg">
-                            Our AI asks better questions instead of giving answers, helping students think critically, while teachers are freed from mechanical grading to focus on <span class="font-semibold text-text-primary">inspiring minds</span>.
-                        </p>
+                <div class="max-w-6xl mx-auto text-center relative">
+                    <div class="max-w-full mx-auto relative">
+                        <img src="edu.png" alt="EduPrep AI" class="w-full h-auto">
+                    </div>
+                    
+                    <div class="py-10 bg-hopeful-blue/10 border border-hopeful-blue/30 rounded-lg shadow-md mt-4">
+                        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="max-w-4xl mx-auto">
+                            <p class="text-lg md:text-xl text-text-primary leading-relaxed text-justify">
+                                We're building a future where AI enhances and never replaces learning. A future where no child feels inadequate because the classroom moved too fast, and after-school coaching becomes obsolete because schools finally deliver personalized feedback, deep understanding, and the space to learn at their own pace. One where AI asks better questions instead of giving answers, helping students think critically, and teachers are freed from mechanical grading.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Problem Statement -->
-    <section class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="inline-flex items-center justify-center w-16 h-16 bg-hopeful-yellow/20 rounded-xl mb-8">
-                <span class="text-2xl text-hopeful-yellow">💔</span>
-            </div>
-            <h2 class="text-3xl sm:text-4xl font-bold text-text-primary mb-12">
-                The Reality We're Changing
-            </h2>
-            
-            <div class="bg-hopeful-yellow/10 rounded-md p-10 border-t-2 border-hopeful-yellow">
-                <blockquote class="text-xl sm:text-2xl text-text-secondary italic leading-relaxed mb-6 font-medium">
-                    "A young student attends a second school after returning from school."
-                </blockquote>
-                <div class="text-lg text-text-secondary mb-6">
-                    This shouldn't be the reality for any child. 
-                </div>
-                <div class="inline-flex items-center bg-hopeful-blue text-white px-6 py-3 rounded-md font-medium text-lg">
-                    But we're changing that
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section id="cta" class="py-20 bg-hopeful-blue/10 relative">
-        <!-- Subtle background element -->
-        <div class="absolute inset-0 bg-gradient-to-br from-hopeful-blue/5 to-transparent pointer-events-none"></div>
-        
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-            <div class="inline-flex items-center justify-center w-16 h-16 bg-white rounded-xl mb-8">
-                <span class="text-2xl text-hopeful-blue">🚀</span>
-            </div>
-            
-            <h2 class="text-3xl sm:text-4xl font-bold text-text-primary mb-6 leading-tight">
-                Ready to Transform Education?
-            </h2>
-            
-            <p class="text-xl text-text-secondary mb-12 max-w-3xl mx-auto leading-relaxed">
-                Join us in creating a future where every student can learn at their own pace and every teacher can focus on what they do best: <span class="font-semibold text-text-primary">inspiring minds</span>.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="mailto:contact@eduprep-ai.com" 
-                   class="bg-hopeful-blue text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-primary-light transition-colors duration-200">
-                    Get in Touch
-                </a>
-                <a href="#contact" 
-                   class="border border-hopeful-coral text-text-primary px-8 py-3 rounded-md text-lg font-medium hover:bg-hopeful-coral/10 transition-colors duration-200">
-                    Learn More
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-hopeful-yellow/10">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-white rounded-xl mb-6">
-                    <span class="text-2xl text-hopeful-yellow">💌</span>
-                </div>
-                <h2 class="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
-                    Let's Connect
-                </h2>
-                <div class="w-16 h-0.5 bg-hopeful-yellow mx-auto mb-4"></div>
-                <p class="text-lg text-text-secondary">
-                    Ready to revolutionize education? We'd love to hear from you.
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12 items-start">
-                <!-- Contact Info -->
-                <div class="space-y-8">
-                    <div class="bg-white rounded-md p-8 border-t-2 border-hopeful-blue">
-                        <div class="text-3xl mb-4 text-hopeful-blue">📧</div>
-                        <h3 class="text-xl font-semibold text-text-primary mb-6">Get in Touch</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-center">
-                                <div class="w-6 h-6 text-hopeful-blue mr-4">
-                                    <span class="text-lg">💌</span>
-                                </div>
-                                <a href="mailto:contact@eduprep-ai.com" class="text-text-secondary hover:text-hopeful-blue transition-colors font-medium">
-                                    contact@eduprep-ai.com
+            <!-- Contact Section -->
+            <section id="contact" class="py-6 mt-6">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-4">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-text-primary mb-6">
+                            Let's Connect
+                        </h2>
+                        
+                        <div class="space-y-4 text-center">
+                            <div class="flex items-center justify-center">
+                                <a href="mailto:anushree@eduprep.ai" class="text-xl text-hopeful-blue hover:text-hopeful-blue/80 transition-colors font-medium">
+                                    anushree@eduprep.ai
                                 </a>
                             </div>
-                            <div class="flex items-center">
-                                <div class="w-6 h-6 text-hopeful-blue mr-4">
-                                    <span class="text-lg">📍</span>
-                                </div>
-                                <span class="text-text-secondary font-medium">San Francisco, CA</span>
+                            <div class="flex items-center justify-center">
+                                <span class="text-lg text-text-secondary font-medium">Stanford, California</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="bg-white rounded-md p-8 border-t-2 border-hopeful-coral">
-                        <div class="text-3xl mb-4 text-hopeful-coral">👩‍🏫</div>
-                        <h3 class="text-xl font-semibold text-text-primary mb-6">For Educators</h3>
-                        <p class="text-text-secondary leading-relaxed">
-                            Interested in piloting EduPrep AI in your classroom? We're looking for forward-thinking educators to join our early access program.
-                        </p>
-                    </div>
                 </div>
+            </section>
+        </div>
 
-                <!-- Contact Form -->
-                <div class="bg-white rounded-md p-8 border-t-2 border-hopeful-yellow">
-                    <div class="text-center mb-6">
-                        <div class="text-3xl mb-2 text-hopeful-yellow">💌</div>
-                        <h3 class="text-xl font-semibold text-text-primary">Send Us a Message</h3>
+        <!-- Footer -->
+        <footer class="bg-white shadow-sm py-8 mt-4">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <div class="text-text-secondary space-y-2">
+                        <p>&copy; 2025 EduPrep AI. All rights reserved.</p>
+                        <p>Built with care for educators and students everywhere</p>
                     </div>
-                    
-                    <form class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-text-primary mb-2">Name</label>
-                            <input type="text" id="name" name="name" 
-                                   class="w-full px-4 py-3 border border-border-light rounded-md focus:outline-none focus:ring-1 focus:ring-primary/20 focus:border-primary transition-colors bg-white"
-                                   placeholder="Your name">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-text-primary mb-2">Email</label>
-                            <input type="email" id="email" name="email" 
-                                   class="w-full px-4 py-3 border border-border-light rounded-md focus:outline-none focus:ring-1 focus:ring-primary/20 focus:border-primary transition-colors bg-white"
-                                   placeholder="your.email@example.com">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-text-primary mb-2">Message</label>
-                            <textarea id="message" name="message" rows="4" 
-                                      class="w-full px-4 py-3 border border-border-light rounded-md focus:outline-none focus:ring-1 focus:ring-primary/20 focus:border-primary transition-colors resize-none bg-white"
-                                      placeholder="Tell us about your interest in EduPrep AI..."></textarea>
-                        </div>
-                        <button type="submit" 
-                                class="w-full bg-hopeful-yellow text-text-primary px-8 py-3 rounded-md font-medium hover:bg-hopeful-yellow/80 transition-colors duration-200">
-                            Send Message
-                        </button>
-                    </form>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-white border-t border-border-light py-16">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <div class="mb-8">
-                    <div class="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-hopeful-blue via-hopeful-yellow to-hopeful-coral/80 rounded-lg mb-4">
-                        <span class="text-lg text-white">✨</span>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-text-primary mb-3">
-                        EduPrep AI
-                    </h3>
-                    <p class="text-text-secondary text-lg">Making education better, one student at a time</p>
-                </div>
-                <div class="text-text-secondary space-y-2">
-                    <p>&copy; 2024 EduPrep AI. All rights reserved.</p>
-                    <p>Built with care for educators and students everywhere</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <!-- Smooth scroll script -->
     <script>
